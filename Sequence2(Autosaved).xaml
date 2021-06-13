@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,3221" sap2010:WorkflowViewState.IdRef="Sequence2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,3281" sap2010:WorkflowViewState.IdRef="Sequence2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -68,7 +68,12 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence2" sap:VirtualizedContainerService.HintSize="494,3116" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Sequence2" sap:VirtualizedContainerService.HintSize="494,3216" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="out" />
       <Variable x:TypeArguments="x:String" Name="d" />
@@ -96,13 +101,13 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
     <ui:WriteRange AddHeaders="False" DataTable="[quer5]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="452,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Tabelle1" StartingCell="A1" WorkbookPath="C:\Users\matth\Desktop\RPA\rohe-Dateien\Entwurf fuer RPA (2).xlsx" />
-    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="452,1975" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\matth\Desktop\RPA\rohe-Dateien\Entwurf fuer RPA (2).xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="452,2075" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\matth\Desktop\RPA\rohe-Dateien\Entwurf fuer RPA (2).xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="418,1866" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence sap:VirtualizedContainerService.HintSize="418,1966" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="quer4" />
             </Sequence.Variables>
@@ -111,7 +116,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1455" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1555" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="q" />
                 <Variable x:TypeArguments="sd:DataTable" Name="quer" />
@@ -120,6 +125,7 @@
                 <Variable x:TypeArguments="sd:DataTable" Name="quer3" />
                 <Variable x:TypeArguments="sd:DataTable" Name="quer4" />
                 <Variable x:TypeArguments="x:String" Name="a" />
+                <Variable x:TypeArguments="x:String" Name="h" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -127,7 +133,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Damit wird der oberste Teil des Dokumentes umplatziert. (einlesen, löschen und am neuen ort platzieren)" DataTable="[quer]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1:B8" SheetName="Tabelle1">
+              <ui:ExcelReadRange AddHeaders="False" sap2010:Annotation.AnnotationText="Damit wird der oberste Teil des Dokumentes umplatziert. (einlesen, löschen und am neuen ort platzieren)" DataTable="[quer]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1:B8" SheetName="Tabelle1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,6 +142,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelReadRange>
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[h]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">adfadf</InArgument>
+                </Assign.Value>
+              </Assign>
               <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A1:B8" SheetName="Tabelle1" ShiftCells="False" ShiftOption="ShiftUp">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -370,15 +384,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Damit wird die Datei am neuen Ort gespeichert (zuerst einlesen dann speichern)" DataTable="[out]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="452,129" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Tabelle1" WorkbookPath="C:\Users\matth\Desktop\RPA\rohe-Dateien\Entwurf fuer RPA (2).xlsx">
-      <ui:ReadRange.Range>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" Value="" />
-        </InArgument>
-      </ui:ReadRange.Range>
+    <ui:ReadRange AddHeaders="False" sap2010:Annotation.AnnotationText="Damit wird die Datei am neuen Ort gespeichert (zuerst einlesen dann speichern)" DataTable="[out]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="452,129" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B1:M14" SheetName="Tabelle1" WorkbookPath="C:\Users\matth\Desktop\RPA\rohe-Dateien\Entwurf fuer RPA (2).xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
